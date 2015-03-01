@@ -1,0 +1,26 @@
+console.log("Welcome to booze catalog");
+process.stdin.setEncoding("UTF-8");
+process.stdin.resume();
+process.stdin.on("data", onInput);
+
+
+console.log("Enter the name of your liquor");
+process.stdin.read();
+function onInput(input) {
+	liquor.name = input;
+	console.log ("Your liquor is ", liquor.name, "Type is ", liquor.type, liquor.ABV);
+
+}
+
+var liquor = {
+  name: "",
+  type: "",
+  ABV: "",
+  bottled: {
+  	year: "",
+  	place: "",
+  }
+}
+
+
+console.log (liquor.name, liquor.type, liquor.ABV);
